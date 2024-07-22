@@ -87,9 +87,9 @@ const WeatherApp = () => {
             </div>
             {loading ? ( <div>Loading...</div>): ("")}
             <div className='weather-card'>
+            {error && <h1>{error}</h1>}
             {weather && <WeatherCard weather={weather} date={date} time={time}/>}
             </div>
-            {error && <h1>{error}</h1>}
         </div>
       </div>
     </StateContext.Provider>
