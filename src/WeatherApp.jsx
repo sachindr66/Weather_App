@@ -69,8 +69,8 @@ const WeatherApp = () => {
         </div>
         <div className='card_container'>
             <div className='header'>
+             <h1 className='heading'>weather App</h1>
             <div className='form'>
-             <h1>weather App</h1>
               <form onSubmit={handleSubmit}>
                 <div className='input-btn'>
                 <i className='locatin_icon'><LocationOn/></i>
@@ -87,7 +87,7 @@ const WeatherApp = () => {
             </div>
             {loading ? ( <div>Loading...</div>): ("")}
             <div className='weather-card'>
-            {error && <h1>{error}</h1>}
+            {error && <h1 className='error'>{error}</h1>}
             {weather && <WeatherCard weather={weather} date={date} time={time}/>}
             </div>
         </div>
