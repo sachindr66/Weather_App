@@ -5,13 +5,14 @@ import fog from '../assets/icons/fog.png'
 import rain from '../assets/icons/rain.png'
 import snow from '../assets/icons/snow.png'
 import storm from '../assets/icons/storm.png'
+import clear from '../assets/icons/clear.png'
 import wind from '../assets/icons/windy.png'
 import humudity from '../assets/icons/humidity.png'
 import speed from '../assets/icons/anemometer.png'
 
 const WeatherCard = ({ weather, date, time }) => {
 
-const [icon, setIcon]=useState(sun)
+const [icon, setIcon]=useState(clear)
 
   useEffect(() => {
     if (weather?.weather?.[0]?.description) {

@@ -10,7 +10,7 @@ const WeatherApp = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState({
     main:{temp:0, temp_min:0, temp_max:0, humidity:0},
-    weather:[{description: 'clear'}],
+    weather:[{description: 'Sunny'}],
     name: 'city',
     wind: {speed:0},
     sys:{country:"country"}
@@ -25,7 +25,7 @@ const WeatherApp = () => {
   const getWeatherData = async (cityName) => {
     setLoading({
       main:{temp:0, temp_min:0, temp_max:0, humidity:0},
-      weather:[{description: 'clear'}],
+      weather:[{description: 'sunny'}],
       name: 'city',
       wind: {speed:0},
       sys:{country:"country"}
