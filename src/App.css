@@ -5,12 +5,14 @@
 
 .background_img{
   width: 100%;
-  min-height: 700px;
+  min-height: 800px;
 }
 
 .parent{
   display: flex;
   width: 100%;
+  font-family: sans-serif;
+  color: #ffffff;
 }
 
 .background-image{
@@ -20,21 +22,22 @@
 .card_container{
   display: flex;
   flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 20px;
   position: fixed;
   height: 100%;
 }
 
 .header{
   display: flex;
-  background-color: red;
   justify-content: center;
   align-items: center;
   width: 100%;
+  color:#ffffff;
 }
 
 .form{
@@ -46,24 +49,66 @@
 
 .input-btn{
   display: flex;
+  align-items: center;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 4px;
+  padding: 0px 4px;
 }
+
 button{
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
   border:none;
+  justify-content: center;
+  background: transparent;
+  padding: 4px;
+  background-color: blue;
 }
+
+.locatin_icon{
+  display: flex;
+  align-items: center;
+  color: #808080;
+}
+
+.search_icon{
+  display: flex;
+  align-items: center;
+  animation: rotate 1s linear infinite;
+  transform: rotate(360deg);
+  transition: 1s;
+  color: white;
+  animation: zoom-in-out 0.6s infinite alternate;
+
+&:hover{
+  rotate: 360deg;
+}
+
+
+
+}
+
+@keyframes zoom-in-out {
+  0% {
+    scale: 0.9;
+  }
+  
+  100% {
+    scale: 1.1;
+  }
+}
+
+
+
+
 input{
   padding: 10px;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 20px;
   border: 1px solid #ffffff0f;
-  backdrop-filter: blur(20px);
+  border-radius: 6px;
 }
-
-
-
 
 .weather-card{
   display: flex;
@@ -79,54 +124,97 @@ input{
   text-align: center;
   align-items: center;
   width: 100%;
-  max-width: 400px;
-  gap: 30px;
+  max-width: 340px;
+  gap: 20px;
   background: #ffffff47;
   backdrop-filter: blur(12px);
   border-radius: 10px;
-  padding: 30px;
+  border: 1px solid #ffffff66;
+  padding: 40px 30px;
   margin: auto;
-  box-shadow: rgba(58, 58, 58, 0.25) 0px 50px 100px -20px, rgba(82, 82, 82, 0.3) 0px 30px 60px -30px, rgba(221, 221, 221, 0.452) 0px -2px 6px 0px inset;
+  letter-spacing: 1px;
+  box-shadow: #3a3a3a40 0px 50px 100px -20px, #5252524d 0px 30px 60px -30px, #dddddd73 0px -2px 6px 0px inset;
 }
 
 .weather-details-container,.txt-container{
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
+  font-size: 18px;
 }
 
 .weather-condition-icon{
   width: 100px;
+  object-fit: contain;
 }
+
+.temp{
+  font-size: 46px;
+}
+
+.date-time{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+}
+
+.date,.time{
+  width: 50%;
+}
+
 .humidity-wind{
   display: flex;
+  font-size: 14px;
   gap: 10px;
   justify-content: space-between;
   width: 100%;
 }
 
-.weather-condition-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: blue;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  empty-cells: 50%;
-}
-
 .humidity-container{
   display: flex;
-  gap: 10px;
-}
-
-.Wind-container{
-  padding: 10px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
   box-sizing: border-box;
   border-radius: 10px;
   width: 50%;
-  background-color: green;
+  padding: 6px;
+  gap: 10px;
 }
+
+.humidity-icons{
+  width: 30px;
+}
+
+.Wind-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+
+@media only screen and (max-width: 480px){
+
+  .weather-details-container,.txt-container{
+    font-size: 13px;
+  }
+
+  .humidity-wind,.date-time{
+    font-size: 12px;
+  }
+ 
+
+}
+  
+
+
