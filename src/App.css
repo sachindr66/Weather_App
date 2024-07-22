@@ -3,13 +3,6 @@
   padding: 0;
 }
 
-body{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  /* background-image: url(https://img.freepik.com/free-psd/weather-background-with-clouds_23-2150374545.jpg?w=996&t=st=1721672653~exp=1721673253~hmac=8702ac5e7530c178b2ef604666af0f1863ff50a7793e1bae7b59aae4c25eb17d); */
-  background-size: cover;
-}
 
 .background_img{
   width: 100%;
